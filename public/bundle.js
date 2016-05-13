@@ -107,7 +107,7 @@
 	var Main = __webpack_require__(227);
 	var Weather = __webpack_require__(229);
 	var About = __webpack_require__(250);
-	var Examples = __webpack_require__(251);
+	var Examples = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"Examples\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
 
 	// load foundation
 	__webpack_require__(252);
@@ -25246,25 +25246,28 @@
 /* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 	var Nav = __webpack_require__(228);
 
 	var Main = React.createClass({
-	  displayName: 'Main',
+	  displayName: "Main",
 
 	  render: function render() {
 	    return React.createElement(
-	      'div',
+	      "div",
 	      null,
 	      React.createElement(Nav, null),
 	      React.createElement(
-	        'h2',
-	        null,
-	        'Main Component'
-	      ),
-	      this.props.children
+	        "div",
+	        { className: "row" },
+	        React.createElement(
+	          "div",
+	          { className: "columns medium-6 large-4 small-centered" },
+	          this.props.children
+	        )
+	      )
 	    );
 	  }
 	});
@@ -26657,37 +26660,7 @@
 	module.exports = About;
 
 /***/ },
-/* 251 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	var React = __webpack_require__(8);
-
-	var Examples = React.createClass({
-	  displayName: "Examples",
-
-	  render: function render() {
-	    return React.createElement(
-	      "div",
-	      null,
-	      React.createElement(
-	        "h3",
-	        null,
-	        "Examples"
-	      ),
-	      React.createElement(
-	        "p",
-	        null,
-	        "Welcome to the examples page"
-	      )
-	    );
-	  }
-	});
-
-	module.exports = Examples;
-
-/***/ },
+/* 251 */,
 /* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
