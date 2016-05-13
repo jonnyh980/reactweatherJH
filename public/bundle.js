@@ -107,7 +107,7 @@
 	var Main = __webpack_require__(227);
 	var Weather = __webpack_require__(229);
 	var About = __webpack_require__(250);
-	var Examples = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"Examples\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var Examples = __webpack_require__(251);
 
 	// load foundation
 	__webpack_require__(252);
@@ -26660,7 +26660,64 @@
 	module.exports = About;
 
 /***/ },
-/* 251 */,
+/* 251 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(8);
+
+	var _require = __webpack_require__(166);
+
+	var Link = _require.Link;
+
+
+	var Examples = React.createClass({
+	  displayName: "Examples",
+
+	  render: function render() {
+	    return React.createElement(
+	      "div",
+	      null,
+	      React.createElement(
+	        "h1",
+	        { className: "text-center" },
+	        "Examples"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Here are a few example Locations to try out"
+	      ),
+	      React.createElement(
+	        "ol",
+	        null,
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: "/?location=Belfast" },
+	            "Belfast, Northern Ireland"
+	          )
+	        ),
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            Link,
+	            { to: "/?location=Shekou" },
+	            "Shekou, China"
+	          )
+	        )
+	      )
+	    );
+	  }
+	});
+
+	module.exports = Examples;
+
+/***/ },
 /* 252 */
 /***/ function(module, exports, __webpack_require__) {
 
