@@ -26524,18 +26524,27 @@
 /* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(1);
 
 	var About = React.createClass({
-	  displayName: 'About',
+	  displayName: "About",
 
 	  render: function render() {
 	    return React.createElement(
-	      'h3',
+	      "div",
 	      null,
-	      'About Component'
+	      React.createElement(
+	        "h3",
+	        null,
+	        "About"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Welcome to the about page"
+	      )
 	    );
 	  }
 	});
@@ -26561,6 +26570,11 @@
 	        "h3",
 	        null,
 	        "Examples"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "Welcome to the examples page"
 	      )
 	    );
 	  }
