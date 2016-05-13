@@ -26546,18 +26546,22 @@
 /* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(1);
 
 	var Examples = React.createClass({
-	  displayName: 'Examples',
+	  displayName: "Examples",
 
 	  render: function render() {
 	    return React.createElement(
-	      'h3',
+	      "div",
 	      null,
-	      'Examples Component'
+	      React.createElement(
+	        "h3",
+	        null,
+	        "Examples Component"
+	      )
 	    );
 	  }
 	});
