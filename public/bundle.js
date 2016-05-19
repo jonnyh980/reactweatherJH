@@ -25371,7 +25371,7 @@
 /* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 	var WeatherForm = __webpack_require__(230);
@@ -25379,7 +25379,7 @@
 	var openWeatherMap = __webpack_require__(232);
 
 	var Weather = React.createClass({
-	  displayName: 'Weather',
+	  displayName: "Weather",
 
 	  getInitialState: function getInitialState() {
 	    return {
@@ -25412,9 +25412,9 @@
 	    function renderMessage() {
 	      if (isLoading) {
 	        return React.createElement(
-	          'h3',
-	          null,
-	          'Fetching weather...'
+	          "h3",
+	          { className: "text-center" },
+	          "Fetching weather..."
 	        );
 	      } else if (temp && location) {
 	        return React.createElement(WeatherMessage, { temp: temp, location: location });
@@ -25422,12 +25422,12 @@
 	    }
 
 	    return React.createElement(
-	      'div',
+	      "div",
 	      null,
 	      React.createElement(
-	        'h3',
-	        null,
-	        'Weather Component'
+	        "h1",
+	        { className: "text-center" },
+	        "Get Weather"
 	      ),
 	      React.createElement(WeatherForm, { onSearch: this.handleSearch }),
 	      renderMessage()
@@ -25441,12 +25441,12 @@
 /* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var WeatherForm = React.createClass({
-	  displayName: 'WeatherForm',
+	  displayName: "WeatherForm",
 
 	  onFormSubmit: function onFormSubmit(e) {
 	    e.preventDefault();
@@ -25454,22 +25454,22 @@
 	    var location = this.refs.location.value;
 
 	    if (location.length > 0) {
-	      this.refs.location.value = '';
+	      this.refs.location.value = "";
 	      this.props.onSearch(location);
 	    }
 	  },
 	  render: function render() {
 	    return React.createElement(
-	      'div',
+	      "div",
 	      null,
 	      React.createElement(
-	        'form',
+	        "form",
 	        { onSubmit: this.onFormSubmit },
-	        React.createElement('input', { type: 'text', ref: 'location' }),
+	        React.createElement("input", { type: "text", ref: "location" }),
 	        React.createElement(
-	          'button',
-	          null,
-	          'Get Weather'
+	          "button",
+	          { className: "button expanded hollow" },
+	          "Get Weather"
 	        )
 	      )
 	    );
@@ -25482,12 +25482,12 @@
 /* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	"use strict";
 
 	var React = __webpack_require__(8);
 
 	var WeatherMessage = React.createClass({
-	  displayName: 'WeatherMessage',
+	  displayName: "WeatherMessage",
 
 	  render: function render() {
 	    var _props = this.props;
@@ -25496,13 +25496,13 @@
 
 
 	    return React.createElement(
-	      'h3',
-	      null,
-	      'It\'s it ',
+	      "h3",
+	      { className: "text-center" },
+	      "It's ",
 	      temp,
-	      ' in ',
+	      " in ",
 	      location,
-	      '.'
+	      "."
 	    );
 	  }
 	});
@@ -26644,14 +26644,42 @@
 	      "div",
 	      null,
 	      React.createElement(
-	        "h3",
-	        null,
+	        "h1",
+	        { className: "text-centered" },
 	        "About"
 	      ),
 	      React.createElement(
 	        "p",
 	        null,
-	        "Welcome to the about page"
+	        "This is a weather application built on react and taught to me by some fucking septic tank who doesnt go into enough detail and assumes too much"
+	      ),
+	      React.createElement(
+	        "p",
+	        null,
+	        "here are some of the tools the tool used"
+	      ),
+	      React.createElement(
+	        "ul",
+	        null,
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "https://facebook.github.io/react" },
+	            "React"
+	          ),
+	          " - this was the JavaScript framework used."
+	        ),
+	        React.createElement(
+	          "li",
+	          null,
+	          React.createElement(
+	            "a",
+	            { href: "http://openweathermap.org" },
+	            "OpenWeatherMap was used to search for localised weather data"
+	          )
+	        )
 	      )
 	    );
 	  }
